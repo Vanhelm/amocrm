@@ -43,7 +43,7 @@ class FileLogService implements ILogger
             return [];
         }
 
-        $logs       = explode("\n", trim($logContent));
+        $logs = explode("\n", trim($logContent));
 
         return array_map(function (string $log): array {
             $log      = json_decode($log, true);
